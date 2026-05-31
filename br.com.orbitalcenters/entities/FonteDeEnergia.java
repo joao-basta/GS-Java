@@ -1,13 +1,13 @@
 public abstract class FonteDeEnergia{
     private double capacidade;
-    private int eficiecia;
+    private int eficiencia;
 
     public FonteDeEnergia() {
     }
 
     public FonteDeEnergia(double capacidade, int eficiecia) {
         this.capacidade = capacidade;
-        this.eficiecia = eficiecia;
+        this.eficiencia = eficiecia;
     }
 
     public double getCapacidade() {
@@ -19,11 +19,11 @@ public abstract class FonteDeEnergia{
     }
 
     public int getEficiecia() {
-        return eficiecia;
+        return eficiencia;
     }
 
-    public void setEficiecia(int eficiecia) {
-        this.eficiecia = eficiecia;
+    public void setEficiecia(int eficiencia) {
+        this.eficiencia = eficiencia;
     }
 
 }
