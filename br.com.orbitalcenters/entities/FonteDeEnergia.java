@@ -1,29 +1,40 @@
 public abstract class FonteDeEnergia{
-    private double capacidade;
-    private int eficiencia;
+    private int id;
+    private double capacidadeinstalada;
+    private double eficiencia;
+    private boolean ativa;
 
-    public FonteDeEnergia() {
+    public double getCapacidadeinstalada() {
+        return capacidadeinstalada;
     }
 
-    public FonteDeEnergia(double capacidade, int eficiecia) {
-        this.capacidade = capacidade;
-        this.eficiencia = eficiecia;
+    public void setCapacidadeinstalada(double capacidadeinstalada) {
+        this.capacidadeinstalada = capacidadeinstalada;
     }
 
-    public double getCapacidade() {
-        return capacidade;
-    }
-
-    public void setCapacidade(double capacidade) {
-        this.capacidade = capacidade;
-    }
-
-    public int getEficiecia() {
+    public double getEficiencia() {
         return eficiencia;
     }
 
-    public void setEficiecia(int eficiencia) {
+    public void setEficiencia(double eficiencia) {
         this.eficiencia = eficiencia;
     }
+
+    public boolean isAtiva() {
+        return ativa;
+    }
+
+    public void setAtiva(boolean ativa) {
+        this.ativa = ativa;
+    }
+
+    public double calcularDisponibilidade(){
+        return null;
+    }
+
+    public String tipo(){
+        return null;
+    }
+
 
 }
