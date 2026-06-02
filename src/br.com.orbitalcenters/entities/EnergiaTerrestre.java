@@ -4,13 +4,13 @@ public class EnergiaTerrestre extends FonteDeEnergia{
     private boolean gridEstavel;
     private String tipoFonte;
 
-    public EnergiaTerrestre(String tipoFonte, boolean gridEstavel) {
-        this.tipoFonte = tipoFonte;
+    public EnergiaTerrestre(boolean gridEstavel, String tipoFonte) {
         this.gridEstavel = gridEstavel;
+        this.tipoFonte = tipoFonte;
     }
 
-    public EnergiaTerrestre(int id, double capacidadeInstalada, double eficiencia, boolean ativa, boolean gridEstavel, String tipoFonte) {
-        super(id, capacidadeInstalada, eficiencia, ativa);
+    public EnergiaTerrestre(double capacidadeInstalada, double eficiencia, boolean ativa, boolean gridEstavel, String tipoFonte) {
+        super(capacidadeInstalada, eficiencia, ativa);
         this.gridEstavel = gridEstavel;
         this.tipoFonte = tipoFonte;
     }
@@ -43,10 +43,6 @@ public class EnergiaTerrestre extends FonteDeEnergia{
             return getCapacidadeInstalada() * (getEficiencia() / 100.0);
         }
 
-    }
-
-    public String tipo(){
-        return null;
     }
 
     public String getCustoEstimado(){

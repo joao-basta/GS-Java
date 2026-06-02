@@ -1,5 +1,4 @@
 package br.com.orbitalcenters.entities;
-import br.com.orbitalcenters.entities.enums.TipoEnergia;
 
 public abstract class FonteDeEnergia{
     private int id;
@@ -10,8 +9,7 @@ public abstract class FonteDeEnergia{
     public FonteDeEnergia() {
     }
 
-    public FonteDeEnergia(int id, double capacidadeInstalada, double eficiencia, boolean ativa) {
-        this.id = id;
+    public FonteDeEnergia(double capacidadeInstalada, double eficiencia, boolean ativa) {
         this.capacidadeInstalada = capacidadeInstalada;
         this.eficiencia = eficiencia;
         this.ativa = ativa;
@@ -50,10 +48,5 @@ public abstract class FonteDeEnergia{
     }
 
     public abstract double calcularDisponibilidade();
-
-    public String tipo(){
-        return null;
-    }
-
 
 }
