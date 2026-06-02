@@ -15,6 +15,8 @@ public abstract class FonteDeEnergia{
         this.ativa = ativa;
     }
 
+    public abstract String tipo();
+
     public int getId() {
         return id;
     }

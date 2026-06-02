@@ -33,6 +33,7 @@ public class EnergiaTerrestre extends FonteDeEnergia{
 
     //Metodos
     @Override
+    public String tipo(){return "Terrestre";}
     public double calcularDisponibilidade(){
         if(!isAtiva()){
             return 0;
