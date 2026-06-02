@@ -1,3 +1,5 @@
+package br.com.orbitalcenters.entities;
+
 public class EnergiaTerrestre extends FonteDeEnergia{
     private String fornecedora;
     private double tensaoRede;

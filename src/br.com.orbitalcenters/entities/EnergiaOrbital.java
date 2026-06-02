@@ -1,3 +1,5 @@
+package br.com.orbitalcenters.entities;
+
 public class EnergiaOrbital extends FonteDeEnergia{
     //private LocalTime janelaInicio;
     //private LocalTime janelaFim;
