@@ -10,8 +10,11 @@ public abstract class FonteDeEnergia{
     }
 
     public FonteDeEnergia(double capacidadeInstalada, double eficiencia, boolean ativa) {
+        System.out.println("Defina a capacidade instalada:");
         this.capacidadeInstalada = capacidadeInstalada;
+        System.out.println("Defina a capacidade instalada:");
         this.eficiencia = eficiencia;
+        System.out.println("Defina a capacidade instalada:");
         this.ativa = ativa;
     }
 

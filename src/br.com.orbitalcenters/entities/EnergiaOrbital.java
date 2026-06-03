@@ -13,8 +13,11 @@ public class EnergiaOrbital extends FonteDeEnergia{
 
     public EnergiaOrbital(double capacidadeInstalada, double eficiencia, boolean ativa, boolean emEclipse, double percentualPainel, double janelaTransmissao) {
         super(capacidadeInstalada, eficiencia, ativa);
+        System.out.println("Defina a capacidade instalada:");
         this.emEclipse = emEclipse;
+        System.out.println("Defina a capacidade instalada:");
         this.percentualPainel = percentualPainel;
+        System.out.println("Defina a capacidade instalada:");
         this.janelaTransmissao = janelaTransmissao;
     }
 
