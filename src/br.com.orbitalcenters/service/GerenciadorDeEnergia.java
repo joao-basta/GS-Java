@@ -18,6 +18,30 @@ public class GerenciadorDeEnergia {
         this.workload = workload;
         this.fonte = fonte;
         this.priorizacao = priorizacao;
+
+    }
+    public List<WorkloadIA> priorizar(List<WorkloadIA> fila, double energiaDisponivel){
+        List<WorkloadIA> selecionados = new ArrayList<>();
+        double energiaRestante = energiaDisponivel;
+
+        for (WorkloadIA w : fila) {
+            if (w.getCriticidade() == NivelCriticidade.CRITICO) {
+                selecionados.add(w);
+                energiaRestante -= w.getConsumoEstimadoEmWatts();
+            }
+        }
+
+        for (WorkloadIA w : fila) {
+            if (w.getCriticidade() != NivelCriticidade.CRITICO) {
+                if (energiaRestante >= w.getConsumoEstimadoEmWatts()) {
+                    selecionados.add(w);
+                    energiaRestante -= w.getConsumoEstimadoEmWatts();
+                }
+            }
+        }
+
+        System.out.println("[PRIORIZAÇÃO] " + selecionados.size() + " workloads selecionados de " + fila.size());
+        return selecionados;
     }
 
 }
