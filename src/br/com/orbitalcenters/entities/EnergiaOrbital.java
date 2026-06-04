@@ -13,11 +13,8 @@ public class EnergiaOrbital extends FonteDeEnergia{
 
     public EnergiaOrbital(double capacidadeInstalada, double eficiencia, boolean ativa, boolean emEclipse, double percentualPainel, double janelaTransmissao) {
         super(capacidadeInstalada, eficiencia, ativa);
-        System.out.println("Defina a capacidade instalada:");
         this.emEclipse = emEclipse;
-        System.out.println("Defina a capacidade instalada:");
         this.percentualPainel = percentualPainel;
-        System.out.println("Defina a capacidade instalada:");
         this.janelaTransmissao = janelaTransmissao;
     }
 
@@ -49,14 +46,15 @@ public class EnergiaOrbital extends FonteDeEnergia{
     @Override
     public String tipo(){return "Orbital";}
 
+    @Override
     public double calcularDisponibilidade(){
-        if (!isAtiva()){
+        if (!ativa){
             return 0;
         }
         if (emEclipse){
             return 0;
         }
-        return getCapacidadeInstalada() * (percentualPainel / 100) * (getEficiencia() / 100);
+        return capacidadeInstalada * (percentualPainel / 100) * (eficiencia / 100);
     }
 
 

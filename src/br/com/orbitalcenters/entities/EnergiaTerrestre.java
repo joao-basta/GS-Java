@@ -34,14 +34,17 @@ public class EnergiaTerrestre extends FonteDeEnergia{
     //Metodos
     @Override
     public String tipo(){return "Terrestre";}
+
+    @Override
     public double calcularDisponibilidade(){
-        if(!isAtiva()){
+        System.out.println(ativa);
+        if(!ativa){
             return 0;
         }
         if(!isGridEstavel()){
-            return getCapacidadeInstalada() * 0.4;
+            return capacidadeInstalada * 0.4;
         } else {
-            return getCapacidadeInstalada() * (getEficiencia() / 100.0);
+            return capacidadeInstalada * (eficiencia / 100.0);
         }
 
     }
