@@ -11,8 +11,7 @@ public class DataCenterRemoto {
 
     public DataCenterRemoto() {}
 
-    public DataCenterRemoto(int id, String nome, double latitude, double longitude,
-                            double capacidadeInstalada, double consumoAtual, FonteDeEnergia fonteEnergia) {
+    public DataCenterRemoto(int id, String nome, double latitude, double longitude, double capacidadeInstalada, double consumoAtual, FonteDeEnergia fonteEnergia) {
         this.id = id;
         this.nome = nome;
         this.latitude = latitude;

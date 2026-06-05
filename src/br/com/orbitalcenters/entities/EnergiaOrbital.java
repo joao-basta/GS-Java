@@ -56,6 +56,4 @@ public class EnergiaOrbital extends FonteDeEnergia{
         }
         return capacidadeInstalada * (percentualPainel / 100) * (eficiencia / 100);
     }
-
-
 }

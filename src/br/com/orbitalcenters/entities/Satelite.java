@@ -11,7 +11,7 @@ public class Satelite {
     private EnergiaOrbital fonteEnergia;
     private List<WorkloadIA> filaDeTarefas;
 
-    public Satelite(){
+    public Satelite() {
         this.filaDeTarefas = new ArrayList<>();
     }
 
